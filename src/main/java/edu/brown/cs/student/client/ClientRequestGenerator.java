@@ -20,8 +20,12 @@ public class ClientRequestGenerator {
     // The resource we want is hosted at https://cq2gahtw4j.execute-api.us-east-1.amazonaws.com/.
     String reqUri = "https://epb3u4xo11.execute-api.us-east-1.amazonaws.com/Prod/introResource";
     // TODO build and return a new GET HttpRequest.
+    HttpRequest request = HttpRequest.newBuilder()
+        .uri(URI.create("https://cq2gahtw4j.execute-api.us-east-1.amazonaws.com/"))
+        .build();
     // See https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/HttpRequest.html and
     // https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/HttpRequest.Builder.html
+    System.out.println(request);
     return null;
   }
 
